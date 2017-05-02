@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    line-height: 1em;
+}
+
+body {
+
+    width: 100%;
+    margin: auto;
+    background-color: #ecf1ef;
+    color: #404040;
+    line-height: 1.8;
+
+}
+
+
+
+h1,h2,h3,p{ font-family: 'arial', sans-serif;
+font-size: 2em;
+
+}
+
+
+Nav{width:100%;
+  height:100px;
+display: flex;
+background-color: #333;}
+
+
+
+
+
+/* slider--------------------------------------------------------------------------------------------------------------------------------------------*/
+.flex-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.flex-wrapper a {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: flex .4s;
+}
+
+.flex-wrapper .one {
+	background-image:url(../images/icelollymockup.gif);
+
+  background-color: red;
+}
+
+.flex-wrapper .two {
+  background-image: url(../images/desk.jpg);
+  background-color: green;
+}
+
+.flex-wrapper .three {
+  background-image: url(../images/min-mockups.jpg);
+  background-color: steelblue;
+}
+
+.flex-wrapper .four {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/nav-004.jpg);
+  background-color: orange;
+}
+
+.flex-wrapper .five {
+  background-image: url(../images/meat-in-a-bap.jpg);
+  background-color: tomato;
+}
+
+.flex-wrapper a:hover {
+  flex: 3;
+}
+
+.flex-wrapper .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color .4s;
+}
+
+.flex-wrapper a:hover .overlay {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.flex-wrapper .overlay-inner * {
+  visibility: hidden;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+
+.flex-wrapper .overlay h2 {
+  transform: translate3d(0, -60px, 0);
+}
+
+.flex-wrapper .overlay p {
+  transform: translate3d(0, 60px, 0);
+}
+
+.flex-wrapper a:hover .overlay-inner * {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: all .3s .3s;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+  }
+
+  .flex-wrapper a:hover {
+    flex: 1;
+  }
+
+  .flex-wrapper a:hover .overlay {
+    background-color: transparent;
+  }
+
+  .flex-wrapper .overlay h2,
+  .flex-wrapper .overlay p {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+
+
+
+/* slider--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* angled section--------------------------------------------------------------------------------------------------------------------------------------------*/
+.angle-bottom {
+  position: relative;
+  z-index: 1;
+}
+.angle-bottom:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.angle-bottom:after {
+  bottom: 0;
+  transform: skewY(3.5deg);
+  transform-origin: 0 100%;
+
+}
+
+
+
+.content {
+  background-color: #fff;
+  color: #404040;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 0 2px;
+  padding-top:5em;
+  padding-bottom:1em;
+  text-align: center;
+}
+
+
+.portfolio-page {
+  background-color:peachpuff;
+  color: #404040;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 0 2px;
+  padding-top:5em;
+  padding-bottom:1em;
+  text-align: center;
+}
+
+
+
+h1 {
+  font-size: 160px;
+  font-weight: 500;
+  margin-bottom:0.3em;
+  font-family:roboto;
+
+}
+
+span {
+  font-size: 120px;
+  font-weight: 500;
+  font-family:roboto;
+
+}
+
+.brief{
+  font-size: 1.34em;
+  font-weight: 300;
+  padding: 0;
+  padding-top:0.4em;
+  max-width:60%;
+  text-align:left;
+  margin:auto;
+  font-family:roboto;
+  line-height: 1.2;
+}
+
+/* angled section--------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+.flex-row{
+  width:100%;
+  display: flex;
+padding-top: 8em;
+  flex-direction:row;
+}
+
+.flex-row-two{
+  width:100%;
+  display: flex;
+padding-top: 2em;
+  flex-direction:row;
+  background-color: #fff;
+
+
+}
+
+.left-col{
+
+  width: 100%;
+  margin-bottom: 1.5em;
+background-color: honeydew;}
+
+
+.right-col{
+
+  width: 100%;
+  padding-bottom: 1.5em;
+ background-color:;}
+
+@media screen and (max-width: 800px) {
+  .flex-row{ flex-direction: column;
+    width: 100%;}}
+
+  @media screen and (max-width: 800px) {
+      .flex-row-two{ flex-direction: column;
+        width: 100%;}}
+
+
+h3{margin:auto;
+text-align: center;
+font-family:roboto;
+font-size: 7em;}
+
+h4{margin:auto;
+  padding-top: 1em;
+  max-width: 70%;
+text-align: left;
+font-family:roboto;
+font-size: 2em;}
+
+p{ max-width: 70%;
+  margin:auto;
+  font-weight: 300;
+padding-top: 1.2em;
+font-size: 1.3em;
+font-family:roboto;}
+
+
+
+.hire-info { max-width: 60%;
+  margin:auto;
+  text-align: center;
+padding-top: 1.4em;
+font-size: 3em;}
